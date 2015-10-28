@@ -19,7 +19,8 @@ public class new_onClick : MonoBehaviour {
 		switch (buttonName) 
 		{
 		case "new_game_btn":
-			Application.LoadLevel("lvl1");
+//			Application.LoadLevel("lvl1");
+			Application.LoadLevel("Game");
 				break;
 		case "exit_btn":
 			Application.Quit();
