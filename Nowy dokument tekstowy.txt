@@ -1,3 +1,0 @@
-halo
-
-nie no chciaem tylko zobaczyć czy git dziala
