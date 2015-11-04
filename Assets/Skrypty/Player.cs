@@ -29,7 +29,9 @@ public class Player : MonoBehaviour {
 
 		
 		if (Input.GetMouseButtonDown (0)) {
-			start = !start;
+			//start = !start;
+			start = true;
+
 		}
 
 		//mousePosition = normalizacjaMyszy;
