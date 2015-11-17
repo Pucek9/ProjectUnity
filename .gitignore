@@ -1,3 +1,10 @@
+.vs/*
 Library/*
-Assets/Audio.meta
+obj/*
+Temp/*
+Assembly-CSharp.csproj
+Game.sln
+Game.userprefes
 ProjectUnity.sln
+ProjectUnity.userprefs
+ProjectUnity.CSharp.csproj
