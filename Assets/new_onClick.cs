@@ -16,11 +16,17 @@ public class new_onClick : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+
+
+	
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+
+      
+
 
         if (s_trackBar.value == 0)
         {

@@ -2,12 +2,49 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-	
+
+	public int currentOcena {
+		get {
+			return ocena;
+		}
+	}
+	public int currentNastroj {
+		get {
+			return nastroj;
+		}
+	}
+	public float currentOcenaNormalized {
+		get {
+			return (float)ocena / maxOcena;
+		}
+	}
+	public float currentNastrojNormalized {
+		get {
+			return (float)nastroj / maxNastroj;
+		}
+	}
+
+	public int maxOcena;
+	public int maxNastroj;
 	public float predkosc = 1;
 	public float predkoscSkrecania = 1;
 	bool start = false;	
 	// float skrecanie = 0; w zalenozsci od dzialania klawiszy
 	Vector3 normalizacjaMyszy;
+	int ocena = 0;
+	int nastroj = 0;
+
+	public void zmianaNastroju(int obliczanieNastroj){
+
+		nastroj += obliczanieNastroj;
+
+	}
+
+	public void zmianaOceny(int obliczanieOceny){
+
+		ocena += obliczanieOceny;
+
+	}
 	
 	float sterowanie(float pos) {
 		float skrecanie = 0;
