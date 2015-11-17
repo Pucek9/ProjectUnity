@@ -1,5 +1,6 @@
 .vs/*
 obj/*
+Library/*
 Temp/*
 Assembly-CSharp.csproj
 Game.sln
