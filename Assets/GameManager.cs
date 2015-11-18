@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+	int timeLeft = 30;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 	
 	}
 }
