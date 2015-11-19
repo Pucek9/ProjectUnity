@@ -12,6 +12,13 @@ public class CollectableItem : Itemki {
 		gracz.zmianaNastroju (nastroj);
 		gracz.zmianaOceny (oceny);
 
+		if (nastroj <= 0) 
+		
+		{
+			gracz.gameOver(nastroj,oceny);
+
+		}
+
 		Destroy (this.gameObject);
 	}
 	protected override void OnTriggerEnter(Collider c) {

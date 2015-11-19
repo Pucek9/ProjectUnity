@@ -31,8 +31,8 @@ public class Player : MonoBehaviour {
 	bool start = false;	
 	// float skrecanie = 0; w zalenozsci od dzialania klawiszy
 	Vector3 normalizacjaMyszy;
-	int ocena = 0;
-	int nastroj = 0;
+	static public int ocena = 0;
+	static public int nastroj = 0;
 
 	public void zmianaNastroju(int obliczanieNastroj){
 
@@ -43,6 +43,14 @@ public class Player : MonoBehaviour {
 	public void zmianaOceny(int obliczanieOceny){
 
 		ocena += obliczanieOceny;
+
+	}
+
+	public void gameOver (int nastroj, int oceny)
+	{
+
+		Application.LoadLevel("game_over");
+
 
 	}
 	
