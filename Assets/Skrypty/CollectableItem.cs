@@ -1,19 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(SphereCollider))]
 public class CollectableItem : Itemki {
 
-    //
-  
-    //
-    
+    public Renderer rend;   //renderer Sprite
 	public int nastroj = 0;
 	public int oceny = 0;
-
-
 
     public AudioSource audio;
     // Use this for initialization
@@ -38,7 +33,7 @@ public class CollectableItem : Itemki {
 
 		}
        // Destroy(this.gameObject);
-       
+        rend.enabled = false;
 	}
 	protected override void OnTriggerEnter(Collider c) {
         base.OnTriggerEnter(c);
