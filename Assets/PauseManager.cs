@@ -24,11 +24,11 @@ public class PauseManager : MonoBehaviour {
 
       //  audioLevelOne = GetComponent<AudioSource>();
       //  audioLevelOne.Play();
-        AudioSource[] audios = GetComponents<AudioSource>();
-        audioPause = audios[1];
-        audioLevelOne = audios[0];
-
-        audioPause.Pause();
+//        AudioSource[] audios = GetComponents<AudioSource>();
+//        audioPause = audios[1];
+//        audioLevelOne = audios[0];
+//
+//        audioPause.Pause();
 
 	}
 	
