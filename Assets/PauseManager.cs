@@ -19,16 +19,20 @@ public class PauseManager : MonoBehaviour {
     public AudioSource audioLevelOne;
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad (this);
+		DontDestroyOnLoad (gameObject);
+		DontDestroyOnLoad (audioPause);
+		DontDestroyOnLoad (audioLevelOne);
        // audioPause = GetComponent<AudioSource>();
        // audioPause.Pause();
 
       //  audioLevelOne = GetComponent<AudioSource>();
       //  audioLevelOne.Play();
-        AudioSource[] audios = GetComponents<AudioSource>();
-        audioPause = audios[1];
-        audioLevelOne = audios[0];
-
-        audioPause.Pause();
+//        AudioSource[] audios = GetComponents<AudioSource>();
+//        audioPause = audios[1];
+//        audioLevelOne = audios[0];
+//
+//        audioPause.Pause();
 
 	}
 	
@@ -42,8 +46,8 @@ public class PauseManager : MonoBehaviour {
 			Time.timeScale = 0f;
 			isPressed = true;
 			pause_btn.image.sprite = resume;
-            audioPause.Play();
-            audioLevelOne.Pause();
+			if(audioPause != null) audioPause.Play();
+            if(audioLevelOne != null) audioLevelOne.Pause();
 
 		} 
 		else
@@ -51,8 +55,8 @@ public class PauseManager : MonoBehaviour {
 			Time.timeScale = 1.0f;
 			isPressed=false;
 			pause_btn.image.sprite = pause;
-            audioPause.Pause();
-            audioLevelOne.Play();
+			if(audioPause) audioPause.Pause();
+            if(audioLevelOne) audioLevelOne.Play();
 
         }
 			
