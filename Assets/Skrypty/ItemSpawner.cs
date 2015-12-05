@@ -15,6 +15,12 @@ public class ItemSpawner : MonoBehaviour {
 	Player p;
 	float timer;
 	bool[] usedLanes;
+	bool running {
+		get {
+			if(!Player.instance) return false;
+			return Player.instance.isRunning;
+		}
+	}
 
 	void Start() {
 		itemTypeAmountCache = itemPrefabs.Length;
@@ -26,6 +32,8 @@ public class ItemSpawner : MonoBehaviour {
 	}
 
 	void Update() {
+		if (!running)
+			return;
 		Vector3 pos = transform.position;
 		pos.x = 0;
 		transform.position = pos;
